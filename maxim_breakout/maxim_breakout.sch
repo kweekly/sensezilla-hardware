@@ -4648,7 +4648,6 @@ Source: http://www.vishay.com .. dcrcw.pdf</description>
 <part name="C2" library="SparkFun" deviceset="CAP" device="0805"/>
 <part name="C3" library="SparkFun" deviceset="CAP" device="0805"/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
-<part name="TP4" library="WSNlib" deviceset="TESTPOINT" device="100MIL"/>
 <part name="X1" library="WSNlib" deviceset="XTAL" device="ABS07"/>
 <part name="C4" library="SparkFun" deviceset="CAP" device="0805" value="15p"/>
 <part name="C5" library="SparkFun" deviceset="CAP" device="0805" value="33p"/>
@@ -4666,6 +4665,13 @@ Source: http://www.vishay.com .. dcrcw.pdf</description>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="R1" library="rcl" deviceset="R-US_" device="R0805"/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
+<part name="TP1" library="WSNlib" deviceset="TESTPOINT" device="100MIL"/>
+<part name="C8" library="SparkFun" deviceset="CAP" device="0805" value="33p"/>
+<part name="TP2" library="WSNlib" deviceset="TESTPOINT" device="100MIL"/>
+<part name="TP3" library="WSNlib" deviceset="TESTPOINT" device="100MIL"/>
+<part name="TP5" library="WSNlib" deviceset="TESTPOINT" device="100MIL"/>
+<part name="TP6" library="WSNlib" deviceset="TESTPOINT" device="100MIL"/>
+<part name="P+2" library="supply1" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -4677,7 +4683,6 @@ Source: http://www.vishay.com .. dcrcw.pdf</description>
 <instance part="C2" gate="G$1" x="177.8" y="25.4" rot="MR0"/>
 <instance part="C3" gate="G$1" x="182.88" y="25.4" rot="MR0"/>
 <instance part="GND3" gate="1" x="177.8" y="20.32" rot="MR0"/>
-<instance part="TP4" gate="G$1" x="40.64" y="106.68" rot="R180"/>
 <instance part="X1" gate="G$1" x="162.56" y="58.42" rot="MR180"/>
 <instance part="C4" gate="G$1" x="172.72" y="48.26" rot="MR0"/>
 <instance part="C5" gate="G$1" x="152.4" y="48.26" rot="MR0"/>
@@ -4695,6 +4700,13 @@ Source: http://www.vishay.com .. dcrcw.pdf</description>
 <instance part="GND1" gate="1" x="129.54" y="-2.54" rot="MR0"/>
 <instance part="R1" gate="G$1" x="121.92" y="45.72"/>
 <instance part="GND2" gate="1" x="127" y="40.64" rot="MR0"/>
+<instance part="TP1" gate="G$1" x="132.08" y="12.7" rot="MR180"/>
+<instance part="C8" gate="G$1" x="119.38" y="17.78" rot="MR270"/>
+<instance part="TP2" gate="G$1" x="58.42" y="43.18" rot="R180"/>
+<instance part="TP3" gate="G$1" x="58.42" y="40.64" rot="R180"/>
+<instance part="TP5" gate="G$1" x="58.42" y="50.8" rot="R180"/>
+<instance part="TP6" gate="G$1" x="58.42" y="48.26" rot="R180"/>
+<instance part="P+2" gate="VCC" x="48.26" y="60.96" rot="MR0"/>
 </instances>
 <busses>
 </busses>
@@ -4754,11 +4766,19 @@ Source: http://www.vishay.com .. dcrcw.pdf</description>
 <pinref part="U3" gate="G$1" pin="GNDA"/>
 <wire x1="111.76" y1="5.08" x2="129.54" y2="5.08" width="0.1524" layer="91"/>
 <junction x="129.54" y="5.08"/>
+<pinref part="TP1" gate="G$1" pin="P$1"/>
+<junction x="129.54" y="12.7"/>
+<pinref part="C8" gate="G$1" pin="2"/>
+<wire x1="121.92" y1="17.78" x2="129.54" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="17.78" x2="129.54" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="127" y1="45.72" x2="127" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="GND2" gate="1" pin="GND"/>
+<pinref part="U3" gate="G$1" pin="TEST"/>
+<wire x1="111.76" y1="43.18" x2="127" y2="43.18" width="0.1524" layer="91"/>
+<junction x="127" y="43.18"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -4778,7 +4798,17 @@ Source: http://www.vishay.com .. dcrcw.pdf</description>
 <pinref part="TP17" gate="G$1" pin="P$1"/>
 <junction x="182.88" y="30.48"/>
 <pinref part="U3" gate="G$1" pin="VBAT"/>
-<wire x1="111.76" y1="30.48" x2="149.86" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="30.48" x2="119.38" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="U3" gate="G$1" pin="V3P3SYS"/>
+<wire x1="119.38" y1="30.48" x2="121.92" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="30.48" x2="149.86" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="27.94" x2="119.38" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="27.94" x2="119.38" y2="30.48" width="0.1524" layer="91"/>
+<junction x="119.38" y="30.48"/>
+<pinref part="U3" gate="G$1" pin="V3P3A"/>
+<wire x1="111.76" y1="25.4" x2="121.92" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="25.4" x2="121.92" y2="30.48" width="0.1524" layer="91"/>
+<junction x="121.92" y="30.48"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="OUT"/>
@@ -4792,6 +4822,11 @@ Source: http://www.vishay.com .. dcrcw.pdf</description>
 <wire x1="-33.02" y1="73.66" x2="-22.86" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="-22.86" y1="73.66" x2="-22.86" y2="83.82" width="0.1524" layer="91"/>
 <junction x="-22.86" y="83.82"/>
+</segment>
+<segment>
+<pinref part="U3" gate="G$1" pin="V1"/>
+<pinref part="P+2" gate="VCC" pin="VCC"/>
+<wire x1="60.96" y1="58.42" x2="48.26" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$12" class="0">
@@ -4869,6 +4904,37 @@ Source: http://www.vishay.com .. dcrcw.pdf</description>
 <pinref part="R1" gate="G$1" pin="1"/>
 <pinref part="U3" gate="G$1" pin="RESET"/>
 <wire x1="116.84" y1="45.72" x2="111.76" y2="45.72" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="U3" gate="G$1" pin="V2P5"/>
+<pinref part="C8" gate="G$1" pin="1"/>
+<wire x1="114.3" y1="17.78" x2="111.76" y2="17.78" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="U3" gate="G$1" pin="IA"/>
+<pinref part="TP2" gate="G$1" pin="P$1"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="U3" gate="G$1" pin="IB"/>
+<pinref part="TP3" gate="G$1" pin="P$1"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="U3" gate="G$1" pin="VA"/>
+<pinref part="TP5" gate="G$1" pin="P$1"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="U3" gate="G$1" pin="VB"/>
+<pinref part="TP6" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 </nets>
