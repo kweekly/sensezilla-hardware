@@ -3308,23 +3308,23 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <part name="C11" library="SparkFun" deviceset="CAP" device="0603" value="10n"/>
 <part name="C12" library="SparkFun" deviceset="CAP" device="0603" value="10n"/>
 <part name="GND6" library="SparkFun" deviceset="GND" device=""/>
-<part name="R19" library="SparkFun" deviceset="RESISTOR" device="1206" value="470k 320V"/>
-<part name="R20" library="SparkFun" deviceset="RESISTOR" device="1206" value="470k 320V"/>
+<part name="R19" library="SparkFun" deviceset="RESISTOR" device="1206" value="470k 200V"/>
+<part name="R20" library="SparkFun" deviceset="RESISTOR" device="1206" value="470k 200V"/>
 <part name="R21" library="SparkFun" deviceset="RESISTOR" device="0603" value="1k 1%"/>
-<part name="R22" library="SparkFun" deviceset="RESISTOR" device="1206" value="470k 320V"/>
-<part name="R23" library="SparkFun" deviceset="RESISTOR" device="1206" value="470k 320V"/>
+<part name="R22" library="SparkFun" deviceset="RESISTOR" device="1206" value="470k 200V"/>
+<part name="R23" library="SparkFun" deviceset="RESISTOR" device="1206" value="470k 200V"/>
 <part name="R24" library="SparkFun" deviceset="RESISTOR" device="0603" value="1k 1%"/>
-<part name="R25" library="SparkFun" deviceset="RESISTOR" device="1206" value="470k 320V"/>
-<part name="R26" library="SparkFun" deviceset="RESISTOR" device="1206" value="470k 320V"/>
+<part name="R25" library="SparkFun" deviceset="RESISTOR" device="1206" value="470k 200V"/>
+<part name="R26" library="SparkFun" deviceset="RESISTOR" device="1206" value="470k 200V"/>
 <part name="R27" library="SparkFun" deviceset="RESISTOR" device="0603" value="1k 1%"/>
-<part name="R28" library="SparkFun" deviceset="RESISTOR" device="1206" value="470k 320V"/>
-<part name="R29" library="SparkFun" deviceset="RESISTOR" device="1206" value="470k 320V"/>
+<part name="R28" library="SparkFun" deviceset="RESISTOR" device="1206" value="470k 200V"/>
+<part name="R29" library="SparkFun" deviceset="RESISTOR" device="1206" value="470k 200V"/>
 <part name="R30" library="SparkFun" deviceset="RESISTOR" device="0603" value="1k 1%"/>
-<part name="R31" library="SparkFun" deviceset="RESISTOR" device="1206" value="470k 320V"/>
-<part name="R32" library="SparkFun" deviceset="RESISTOR" device="1206" value="470k 320V"/>
+<part name="R31" library="SparkFun" deviceset="RESISTOR" device="1206" value="470k 200V"/>
+<part name="R32" library="SparkFun" deviceset="RESISTOR" device="1206" value="470k 200V"/>
 <part name="R33" library="SparkFun" deviceset="RESISTOR" device="0603" value="1k 1%"/>
-<part name="R34" library="SparkFun" deviceset="RESISTOR" device="1206" value="470k 320V"/>
-<part name="R35" library="SparkFun" deviceset="RESISTOR" device="1206" value="470k 320V"/>
+<part name="R34" library="SparkFun" deviceset="RESISTOR" device="1206" value="470k 200V"/>
+<part name="R35" library="SparkFun" deviceset="RESISTOR" device="1206" value="470k 200V"/>
 <part name="R36" library="SparkFun" deviceset="RESISTOR" device="0603" value="1k 1%"/>
 <part name="GND7" library="SparkFun" deviceset="GND" device=""/>
 <part name="GND8" library="SparkFun" deviceset="GND" device=""/>
@@ -3408,7 +3408,7 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <part name="R43" library="SparkFun" deviceset="RESISTOR" device="0603" value="4.7k"/>
 <part name="R44" library="SparkFun" deviceset="RESISTOR" device="0603" value="10k"/>
 <part name="GND29" library="SparkFun" deviceset="GND" device=""/>
-<part name="R45" library="SparkFun" deviceset="RESISTOR" device="" value="10"/>
+<part name="R45" library="SparkFun" deviceset="RESISTOR" device="" value="4.7 200V"/>
 <part name="C35" library="SparkFun" deviceset="CAP" device="0805" value="2.2u"/>
 <part name="D1" library="diode" deviceset="ZENER-DIODE" device="ZD-7.5"/>
 <part name="D2" library="diode" deviceset="BAS40" device=""/>
@@ -3443,6 +3443,7 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <part name="R48" library="SparkFun" deviceset="RESISTOR" device="0603" value="10k"/>
 <part name="GND36" library="SparkFun" deviceset="GND" device=""/>
 <part name="GND37" library="SparkFun" deviceset="GND" device=""/>
+<part name="R49" library="SparkFun" deviceset="RESISTOR" device="" value="4.7 200V"/>
 </parts>
 <sheets>
 <sheet>
@@ -3594,7 +3595,7 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <instance part="R43" gate="G$1" x="337.82" y="195.58"/>
 <instance part="R44" gate="G$1" x="345.44" y="190.5" rot="R90"/>
 <instance part="GND29" gate="1" x="345.44" y="182.88"/>
-<instance part="R45" gate="G$1" x="81.28" y="307.34"/>
+<instance part="R45" gate="G$1" x="71.12" y="307.34"/>
 <instance part="C35" gate="G$1" x="96.52" y="307.34" rot="R90"/>
 <instance part="D1" gate="G$1" x="109.22" y="302.26" rot="R90"/>
 <instance part="D2" gate="1" x="116.84" y="307.34"/>
@@ -3629,6 +3630,7 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <instance part="R48" gate="G$1" x="370.84" y="187.96" rot="R90"/>
 <instance part="GND36" gate="1" x="370.84" y="180.34"/>
 <instance part="GND37" gate="1" x="327.66" y="101.6"/>
+<instance part="R49" gate="G$1" x="83.82" y="307.34"/>
 </instances>
 <busses>
 </busses>
@@ -4338,7 +4340,7 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 </segment>
 <segment>
 <pinref part="R45" gate="G$1" pin="1"/>
-<wire x1="76.2" y1="307.34" x2="55.88" y2="307.34" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="307.34" x2="55.88" y2="307.34" width="0.1524" layer="91"/>
 <label x="55.88" y="307.34" size="1.778" layer="95"/>
 </segment>
 </net>
@@ -5063,13 +5065,6 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <junction x="109.22" y="307.34"/>
 </segment>
 </net>
-<net name="N$25" class="0">
-<segment>
-<pinref part="C35" gate="G$1" pin="1"/>
-<pinref part="R45" gate="G$1" pin="2"/>
-<wire x1="91.44" y1="307.34" x2="86.36" y2="307.34" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="RTS#" class="0">
 <segment>
 <pinref part="JP1" gate="G$1" pin="RTS"/>
@@ -5119,6 +5114,20 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <pinref part="U6" gate="G$1" pin="RESET"/>
 <wire x1="276.86" y1="109.22" x2="251.46" y2="109.22" width="0.1524" layer="91"/>
 <label x="251.46" y="109.22" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$23" class="0">
+<segment>
+<pinref part="R45" gate="G$1" pin="2"/>
+<pinref part="R49" gate="G$1" pin="1"/>
+<wire x1="76.2" y1="307.34" x2="78.74" y2="307.34" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$25" class="0">
+<segment>
+<pinref part="R49" gate="G$1" pin="2"/>
+<pinref part="C35" gate="G$1" pin="1"/>
+<wire x1="88.9" y1="307.34" x2="91.44" y2="307.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
