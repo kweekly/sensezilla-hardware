@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.2">
+<eagle version="6.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -14590,6 +14590,7 @@ Source: www.kingbright.com</description>
 <part name="LED1" library="led" deviceset="LED" device="CHIPLED_0805"/>
 <part name="LED2" library="led" deviceset="LED" device="CHIPLED_0805"/>
 <part name="GND5" library="SparkFun" deviceset="GND" device=""/>
+<part name="LINE1" library="Cool_Electricity" deviceset="1P_HOLE" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -14712,6 +14713,7 @@ Source: www.kingbright.com</description>
 <instance part="LED1" gate="G$1" x="353.06" y="165.1"/>
 <instance part="LED2" gate="G$1" x="363.22" y="165.1"/>
 <instance part="GND5" gate="1" x="358.14" y="154.94"/>
+<instance part="LINE1" gate="G$1" x="43.18" y="317.5"/>
 </instances>
 <busses>
 </busses>
@@ -15216,7 +15218,12 @@ Source: www.kingbright.com</description>
 <wire x1="88.9" y1="317.5" x2="66.04" y2="317.5" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="317.5" x2="66.04" y2="307.34" width="0.1524" layer="91"/>
 <pinref part="LINE" gate="G$1" pin="1"/>
-<wire x1="55.88" y1="307.34" x2="43.18" y2="307.34" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="307.34" x2="50.8" y2="307.34" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="307.34" x2="43.18" y2="307.34" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="307.34" x2="50.8" y2="317.5" width="0.1524" layer="91"/>
+<junction x="50.8" y="307.34"/>
+<pinref part="LINE1" gate="G$1" pin="1"/>
+<wire x1="50.8" y1="317.5" x2="43.18" y2="317.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
