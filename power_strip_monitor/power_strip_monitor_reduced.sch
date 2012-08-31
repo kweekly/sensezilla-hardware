@@ -14603,6 +14603,32 @@ Source: www.kingbright.com</description>
 <text x="-48.26" y="256.54" size="1.778" layer="97">Ideal: 1.76mOhm</text>
 <text x="-48.26" y="254" size="1.778" layer="97">Wattage: 400mW</text>
 <text x="55.88" y="294.64" size="1.778" layer="97">NOTE: GND=NEUTRAL</text>
+<text x="347.98" y="220.98" size="1.778" layer="97">AN0</text>
+<text x="347.98" y="218.44" size="1.778" layer="97">AN1</text>
+<text x="347.98" y="215.9" size="1.778" layer="97">AN2</text>
+<text x="347.98" y="213.36" size="1.778" layer="97">AN3</text>
+<text x="347.98" y="210.82" size="1.778" layer="97">AN4</text>
+<text x="347.98" y="208.28" size="1.778" layer="97">AN5</text>
+<text x="401.32" y="198.12" size="1.778" layer="97">DIG0</text>
+<text x="401.32" y="195.58" size="1.778" layer="97">DIG1</text>
+<text x="401.32" y="193.04" size="1.778" layer="97">DIG2</text>
+<text x="401.32" y="190.5" size="1.778" layer="97">DIG3</text>
+<text x="401.32" y="187.96" size="1.778" layer="97">DIG4</text>
+<text x="401.32" y="185.42" size="1.778" layer="97">DIG5 (PWM)</text>
+<text x="401.32" y="182.88" size="1.778" layer="97">DIG6 (PWM)</text>
+<text x="401.32" y="180.34" size="1.778" layer="97">DIG7</text>
+<text x="401.32" y="175.26" size="1.778" layer="97">DIG8</text>
+<text x="401.32" y="172.72" size="1.778" layer="97">DIG9 (PWM)</text>
+<text x="401.32" y="170.18" size="1.778" layer="97">DIG10 (PWM)</text>
+<text x="401.32" y="167.64" size="1.778" layer="97">DIG11 (PWM)</text>
+<text x="401.32" y="165.1" size="1.778" layer="97">DIG12</text>
+<text x="401.32" y="162.56" size="1.778" layer="97">DIG13</text>
+<text x="358.14" y="220.98" size="1.778" layer="97">DIG14</text>
+<text x="358.14" y="218.44" size="1.778" layer="97">DIG15</text>
+<text x="358.14" y="215.9" size="1.778" layer="97">DIG16</text>
+<text x="358.14" y="213.36" size="1.778" layer="97">DIG17</text>
+<text x="358.14" y="210.82" size="1.778" layer="97">DIG18</text>
+<text x="358.14" y="208.28" size="1.778" layer="97">DIG19</text>
 </plain>
 <instances>
 <instance part="U2" gate="G$1" x="106.68" y="220.98"/>

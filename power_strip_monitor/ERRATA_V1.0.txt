@@ -1,0 +1,8 @@
+Errata for Power Strip Monitor ( reduced ):
+    
+    Assembly/BOM Errors:
+         - No LEDs ordered
+         - Need twice as many XBee headers
+         
+    Schematic Errors:
+        - Cannot program Atmega, interferes with current sense ICs (Needs pull-ups)

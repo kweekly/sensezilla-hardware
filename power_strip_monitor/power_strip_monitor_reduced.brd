@@ -6,21 +6,21 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.05" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
@@ -32,20 +32,20 @@
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
-<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
-<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
-<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
-<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
-<layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
@@ -58,19 +58,19 @@
 <layer number="97" name="Info" color="7" fill="1" visible="no" active="no"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="no" active="no"/>
 <layer number="100" name="Muster" color="7" fill="1" visible="no" active="no"/>
-<layer number="101" name="Patch_Top" color="12" fill="4" visible="yes" active="yes"/>
-<layer number="102" name="Vscore" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="104" name="Name" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="116" name="Patch_BOT" color="9" fill="4" visible="yes" active="yes"/>
-<layer number="121" name="_tsilk" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="122" name="_bsilk" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="151" name="HeatSink" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="101" name="Patch_Top" color="12" fill="4" visible="no" active="yes"/>
+<layer number="102" name="Vscore" color="7" fill="1" visible="no" active="yes"/>
+<layer number="104" name="Name" color="7" fill="1" visible="no" active="yes"/>
+<layer number="116" name="Patch_BOT" color="9" fill="4" visible="no" active="yes"/>
+<layer number="121" name="_tsilk" color="7" fill="1" visible="no" active="yes"/>
+<layer number="122" name="_bsilk" color="7" fill="1" visible="no" active="yes"/>
+<layer number="151" name="HeatSink" color="7" fill="1" visible="no" active="yes"/>
 <layer number="200" name="200bmp" color="1" fill="10" visible="no" active="no"/>
 <layer number="201" name="201bmp" color="2" fill="1" visible="no" active="no"/>
 <layer number="202" name="202bmp" color="3" fill="1" visible="no" active="no"/>
 <layer number="250" name="Descript" color="3" fill="1" visible="no" active="no"/>
 <layer number="251" name="SMDround" color="12" fill="11" visible="no" active="no"/>
-<layer number="254" name="cooling" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="254" name="cooling" color="7" fill="1" visible="no" active="yes"/>
 </layers>
 <board>
 <plain>
@@ -95,6 +95,18 @@
 <wire x1="37" y1="4.1" x2="37" y2="7.8" width="3.81" layer="30"/>
 <wire x1="29.1" y1="4" x2="28.9" y2="4" width="3.81" layer="30"/>
 <wire x1="28.9" y1="4" x2="28.9" y2="8" width="3.81" layer="30"/>
+<text x="28.702" y="52.07" size="1.778" layer="21">XBEE</text>
+<text x="10.16" y="2.54" size="1.778" layer="21" rot="R90">ISP</text>
+<text x="53.34" y="50.546" size="1.778" layer="21" rot="R180">FTDI</text>
+<text x="71.374" y="52.07" size="1.778" layer="21">GND</text>
+<text x="72.898" y="49.022" size="1.778" layer="21">5V</text>
+<text x="35.052" y="40.386" size="1.778" layer="22" rot="MR0">Power Strip Monitor</text>
+<text x="35.052" y="38.1" size="1.778" layer="22" rot="MR0">Kevin Weekly</text>
+<text x="35.306" y="35.56" size="1.778" layer="22" rot="MR0">Jimmy Wu</text>
+<text x="72.644" y="51.308" size="1.778" layer="22" rot="MR0">DANGER</text>
+<text x="72.644" y="49.022" size="1.778" layer="22" rot="MR0">Never plug in</text>
+<text x="72.898" y="46.99" size="1.778" layer="22" rot="MR0">computer while</text>
+<text x="75.692" y="44.704" size="1.778" layer="22" rot="MR0">mains connected</text>
 </plain>
 <libraries>
 <library name="Cool_Electricity">
@@ -2871,81 +2883,203 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="U2" library="Cool_Electricity" package="SSOP28L_CIRRUS" value="CS5467" x="49.006" y="30.662" rot="R270"/>
-<element name="R1" library="rcl" package="R2512" value="1m 1%" x="52.61" y="12.02" rot="MR270"/>
-<element name="R2" library="SparkFun" package="0603" value="330 1%" x="49.53" y="10.033" rot="R270"/>
-<element name="R3" library="SparkFun" package="0603" value="330 1%" x="49.586" y="15.34" rot="R270"/>
-<element name="C1" library="SparkFun" package="0603" value="10n" x="47.752" y="20.574" rot="R180"/>
-<element name="C2" library="SparkFun" package="0603" value="10n" x="50.927" y="20.574" rot="R180"/>
-<element name="R4" library="rcl" package="R2512" value="1m 1%" x="44.61" y="11.91" rot="MR270"/>
-<element name="R5" library="SparkFun" package="0603" value="330 1%" x="41.49" y="9.434" rot="R270"/>
-<element name="R6" library="SparkFun" package="0603" value="330 1%" x="41.502" y="15.352" rot="R270"/>
-<element name="C3" library="SparkFun" package="0603" value="10n" x="41.529" y="20.574" rot="R180"/>
-<element name="C4" library="SparkFun" package="0603" value="10n" x="44.704" y="20.574" rot="R180"/>
-<element name="R7" library="rcl" package="R2512" value="1m 1%" x="36.61" y="11.8" rot="MR270"/>
-<element name="R8" library="SparkFun" package="0603" value="330 1%" x="33.47" y="9.67" rot="R270"/>
-<element name="R9" library="SparkFun" package="0603" value="330 1%" x="33.486" y="15.258" rot="R270"/>
-<element name="C5" library="SparkFun" package="0603" value="10n" x="35.306" y="20.574" rot="R180"/>
-<element name="C6" library="SparkFun" package="0603" value="10n" x="38.481" y="20.574" rot="R180"/>
-<element name="R10" library="rcl" package="R2512" value="1m 1%" x="28.61" y="11.69" rot="MR270"/>
-<element name="R11" library="SparkFun" package="0603" value="330 1%" x="25.488" y="9.499" rot="R270"/>
-<element name="R12" library="SparkFun" package="0603" value="330 1%" x="25.472" y="15.167" rot="R270"/>
-<element name="C7" library="SparkFun" package="0603" value="10n" x="29.083" y="20.574" rot="R180"/>
-<element name="C8" library="SparkFun" package="0603" value="10n" x="32.258" y="20.574" rot="R180"/>
-<element name="R19" library="SparkFun" package="1206" value="470k 200V" x="75.686" y="19.972" rot="MR270"/>
-<element name="R20" library="SparkFun" package="1206" value="470k 200V" x="75.634" y="25.828" rot="MR90"/>
-<element name="R21" library="SparkFun" package="0603" value="1k 1%" x="71.566" y="27.168" rot="MR0"/>
-<element name="R37" library="SparkFun" package="0603" value="1k 1%" x="66.294" y="29.972" rot="MR90"/>
-<element name="C13" library="SparkFun" package="0603" value="10n" x="71.628" y="29.464" rot="MR0"/>
-<element name="C19" library="SparkFun" package="0603" value="10n" x="68.58" y="29.972" rot="MR90"/>
-<element name="C21" library="SparkFun" package="0603" value=".1u" x="52.578" y="37.084" rot="R180"/>
-<element name="U1" library="Cool_Electricity" package="SSOP28L_CIRRUS" value="CS5467" x="37.28" y="30.742" rot="R270"/>
-<element name="C24" library="SparkFun" package="0603" value=".1u" x="40.386" y="37.084"/>
-<element name="C28" library="SparkFun" package="0603" value=".1u" x="45.72" y="37.084"/>
-<element name="C29" library="SparkFun" package="0603" value=".1u" x="34.036" y="37.338"/>
-<element name="U4" library="SparkFun" package="TQFP32-08" value="ATMEGA168" x="14.018" y="22.05"/>
-<element name="Q1" library="SparkFun" package="HC49UP" value="4.096MHz" x="3.302" y="20.574" rot="R90"/>
-<element name="C31" library="SparkFun" package="0603" value="22p" x="6.35" y="28.194"/>
-<element name="C32" library="SparkFun" package="0603" value="22p" x="6.096" y="12.954"/>
-<element name="C33" library="SparkFun" package="0603" value=".1u" x="7.62" y="23.368" rot="R270"/>
-<element name="C34" library="SparkFun" package="0603" value=".1u" x="20.574" y="19.304" rot="R90"/>
-<element name="TP1" library="WSNlib" package="TESTPOINT" value="TESTPOINTSMALLEST" x="47.202" y="24.104"/>
-<element name="TP2" library="WSNlib" package="TESTPOINT" value="TESTPOINTSMALLEST" x="49.456" y="12.627"/>
-<element name="TP3" library="WSNlib" package="TESTPOINT" value="TESTPOINTSMALLEST" x="41.47" y="12.039"/>
-<element name="TP4" library="WSNlib" package="TESTPOINT" value="TESTPOINTSMALLEST" x="43.303" y="26.835"/>
-<element name="TP5" library="WSNlib" package="TESTPOINT" value="TESTPOINTSMALLEST" x="33.348" y="12.42"/>
-<element name="TP6" library="WSNlib" package="TESTPOINT" value="TESTPOINTSMALLEST" x="35.554" y="23.931"/>
-<element name="TP7" library="WSNlib" package="TESTPOINT" value="TESTPOINTSMALLEST" x="25.473" y="12.341"/>
-<element name="TP8" library="WSNlib" package="TESTPOINT" value="TESTPOINTSMALLEST" x="31.727" y="26.789"/>
-<element name="TP18" library="WSNlib" package="TESTPOINT" value="TESTPOINTSMALLEST" x="75.638" y="47.77"/>
-<element name="TP19" library="WSNlib" package="TESTPOINT" value="TESTPOINTSMALLEST" x="20.358" y="21.704"/>
-<element name="TP20" library="WSNlib" package="TESTPOINT" value="TESTPOINTSMALLEST" x="20.452" y="23.386"/>
-<element name="U6" library="SparkFun" package="XBEE-1" value="XBEE-1B1" x="6.604" y="42.291" rot="R270"/>
-<element name="R43" library="SparkFun" package="0603" value="4.7k" x="22.606" y="50.038" rot="MR90"/>
-<element name="R44" library="SparkFun" package="0603" value="10k" x="25.4" y="50.8" rot="MR0"/>
-<element name="C37" library="SparkFun" package="0603" value="10u" x="56.642" y="52.07" rot="R90"/>
-<element name="C38" library="SparkFun" package="0603" value="10u" x="30.988" y="46.482" rot="MR90"/>
-<element name="C40" library="SparkFun" package="0603" value=".1u" x="29.21" y="52.324" rot="MR90"/>
-<element name="JP1" library="custom" package="1X06" value="" x="51.562" y="52.324" rot="R180"/>
-<element name="C41" library="SparkFun" package="0603" value=".1u" x="38.862" y="48.768" rot="R90"/>
-<element name="R46" library="SparkFun" package="0603" value="10k" x="42.672" y="48.006"/>
-<element name="TP21" library="WSNlib" package="TESTPOINT-100MIL" value="TESTPOINT100MIL" x="77.47" y="50.038"/>
-<element name="TP24" library="WSNlib" package="TESTPOINT-100MIL" value="TESTPOINT100MIL" x="77.47" y="53.086"/>
-<element name="JP2" library="SparkFun" package="2X3-NS" value="AVR_SPI_PRG_6NS" x="5.08" y="6.096" rot="R90"/>
-<element name="R47" library="SparkFun" package="0603" value="4.7k" x="18.542" y="50.292" rot="MR90"/>
-<element name="R48" library="SparkFun" package="0603" value="10k" x="15.748" y="50.8" rot="MR180"/>
-<element name="U5" library="Cool_Electricity" package="RAC01_02-SC" value="RAC01_02-SC" x="68.03" y="26.12" rot="R90"/>
-<element name="C35" library="rcl_new" package="PANASONIC_G" value="1000u" x="63.47" y="49.275"/>
-<element name="U7" library="Cool_Electricity" package="TSOT23-5_LINEAR" value="" x="27.686" y="46.228" rot="MR0"/>
-<element name="LINE" library="Cool_Electricity" package="14GAUGE_HOLE" value="1P_HOLE" x="77.47" y="5.08"/>
-<element name="NEUTRAL" library="Cool_Electricity" package="14GAUGE_HOLE" value="1P_HOLE" x="62" y="4"/>
-<element name="N1" library="Cool_Electricity" package="14GAUGE_HOLE" value="1P_HOLE" x="53" y="4"/>
-<element name="N2" library="Cool_Electricity" package="14GAUGE_HOLE" value="1P_HOLE" x="45" y="4"/>
-<element name="N3" library="Cool_Electricity" package="14GAUGE_HOLE" value="1P_HOLE" x="37" y="4"/>
-<element name="N4" library="Cool_Electricity" package="14GAUGE_HOLE" value="1P_HOLE" x="29" y="4"/>
-<element name="LED1" library="led" package="CHIPLED_0805" value="" x="17.78" y="5.588" rot="R180"/>
-<element name="LED2" library="led" package="CHIPLED_0805" value="" x="15.24" y="5.588" rot="R180"/>
-<element name="LINE1" library="Cool_Electricity" package="14GAUGE_HOLE" value="1P_HOLE" x="72.39" y="5.08"/>
+<element name="U2" library="Cool_Electricity" package="SSOP28L_CIRRUS" value="CS5467" x="49.006" y="30.662" smashed="yes" rot="R270">
+<attribute name="NAME" x="42.306" y="37.218" size="1.778" layer="21" rot="R270"/>
+</element>
+<element name="R1" library="rcl" package="R2512" value="1m 1%" x="52.61" y="12.02" smashed="yes" rot="MR270">
+<attribute name="NAME" x="50.451" y="17.608" size="1.778" layer="26" rot="MR270"/>
+</element>
+<element name="R2" library="SparkFun" package="0603" value="330 1%" x="49.53" y="10.033" smashed="yes" rot="R270">
+<attribute name="NAME" x="50.292" y="10.922" size="1.778" layer="25" font="vector" rot="R270"/>
+</element>
+<element name="R3" library="SparkFun" package="0603" value="330 1%" x="49.586" y="15.34" smashed="yes" rot="R270">
+<attribute name="NAME" x="50.348" y="16.229" size="1.778" layer="25" font="vector" rot="R270"/>
+</element>
+<element name="C1" library="SparkFun" package="0603" value="10n" x="47.752" y="20.574" smashed="yes" rot="R180">
+<attribute name="NAME" x="47.498" y="24.511" size="1.778" layer="25" font="vector" rot="R270"/>
+</element>
+<element name="C2" library="SparkFun" package="0603" value="10n" x="50.927" y="20.574" smashed="yes" rot="R180">
+<attribute name="NAME" x="50.546" y="24.384" size="1.778" layer="25" font="vector" rot="R270"/>
+</element>
+<element name="R4" library="rcl" package="R2512" value="1m 1%" x="44.61" y="11.91" smashed="yes" rot="MR270">
+<attribute name="NAME" x="42.451" y="17.498" size="1.778" layer="26" rot="MR270"/>
+</element>
+<element name="R5" library="SparkFun" package="0603" value="330 1%" x="41.49" y="9.434" smashed="yes" rot="R270">
+<attribute name="NAME" x="42.252" y="10.323" size="1.778" layer="25" font="vector" rot="R270"/>
+</element>
+<element name="R6" library="SparkFun" package="0603" value="330 1%" x="41.502" y="15.352" smashed="yes" rot="R270">
+<attribute name="NAME" x="42.264" y="16.241" size="1.778" layer="25" font="vector" rot="R270"/>
+</element>
+<element name="C3" library="SparkFun" package="0603" value="10n" x="41.529" y="20.574" smashed="yes" rot="R180">
+<attribute name="NAME" x="40.132" y="24.638" size="1.778" layer="25" font="vector" rot="R270"/>
+</element>
+<element name="C4" library="SparkFun" package="0603" value="10n" x="44.704" y="20.574" smashed="yes" rot="R180">
+<attribute name="NAME" x="43.18" y="24.765" size="1.778" layer="25" font="vector" rot="R270"/>
+</element>
+<element name="R7" library="rcl" package="R2512" value="1m 1%" x="36.61" y="11.8" smashed="yes" rot="MR270">
+<attribute name="NAME" x="33.943" y="16.88" size="1.778" layer="26" rot="MR270"/>
+</element>
+<element name="R8" library="SparkFun" package="0603" value="330 1%" x="33.47" y="9.67" smashed="yes" rot="R270">
+<attribute name="NAME" x="34.232" y="10.559" size="1.778" layer="25" font="vector" rot="R270"/>
+</element>
+<element name="R9" library="SparkFun" package="0603" value="330 1%" x="33.486" y="15.258" smashed="yes" rot="R270">
+<attribute name="NAME" x="34.248" y="16.147" size="1.778" layer="25" font="vector" rot="R270"/>
+</element>
+<element name="C5" library="SparkFun" package="0603" value="10n" x="35.306" y="20.574" smashed="yes" rot="R180">
+<attribute name="NAME" x="33.528" y="24.511" size="1.778" layer="25" font="vector" rot="R270"/>
+</element>
+<element name="C6" library="SparkFun" package="0603" value="10n" x="38.481" y="20.574" smashed="yes" rot="R180">
+<attribute name="NAME" x="36.83" y="24.638" size="1.778" layer="25" font="vector" rot="R270"/>
+</element>
+<element name="R10" library="rcl" package="R2512" value="1m 1%" x="28.61" y="11.69" smashed="yes" rot="MR270">
+<attribute name="NAME" x="26.705" y="18.294" size="1.778" layer="26" rot="MR270"/>
+</element>
+<element name="R11" library="SparkFun" package="0603" value="330 1%" x="25.488" y="9.499" smashed="yes" rot="R270">
+<attribute name="NAME" x="26.25" y="10.388" size="1.778" layer="25" font="vector" rot="R270"/>
+</element>
+<element name="R12" library="SparkFun" package="0603" value="330 1%" x="25.472" y="15.167" smashed="yes" rot="R270">
+<attribute name="NAME" x="26.234" y="16.056" size="1.778" layer="25" font="vector" rot="R270"/>
+</element>
+<element name="C7" library="SparkFun" package="0603" value="10n" x="29.083" y="20.574" smashed="yes" rot="R180">
+<attribute name="NAME" x="27.686" y="24.638" size="1.778" layer="25" font="vector" rot="R270"/>
+</element>
+<element name="C8" library="SparkFun" package="0603" value="10n" x="32.258" y="20.574" smashed="yes" rot="R180">
+<attribute name="NAME" x="30.734" y="24.511" size="1.778" layer="25" font="vector" rot="R270"/>
+</element>
+<element name="R19" library="SparkFun" package="1206" value="470k 200V" x="75.686" y="19.972" smashed="yes" rot="MR270">
+<attribute name="NAME" x="73.781" y="22.512" size="1.778" layer="26" rot="MR270"/>
+</element>
+<element name="R20" library="SparkFun" package="1206" value="470k 200V" x="75.634" y="25.828" smashed="yes" rot="MR90">
+<attribute name="NAME" x="77.031" y="23.796" size="1.778" layer="26" rot="MR90"/>
+</element>
+<element name="R21" library="SparkFun" package="0603" value="1k 1%" x="71.566" y="27.168" smashed="yes" rot="MR0">
+<attribute name="NAME" x="72.963" y="24.374" size="1.778" layer="26" font="vector" rot="MR0"/>
+</element>
+<element name="R37" library="SparkFun" package="0603" value="1k 1%" x="66.294" y="29.972" smashed="yes" rot="MR90">
+<attribute name="NAME" x="65.278" y="32.385" size="1.778" layer="26" font="vector" rot="MR90"/>
+</element>
+<element name="C13" library="SparkFun" package="0603" value="10n" x="71.628" y="29.464" smashed="yes" rot="MR0">
+<attribute name="NAME" x="74.549" y="30.226" size="1.778" layer="26" font="vector" rot="MR0"/>
+</element>
+<element name="C19" library="SparkFun" package="0603" value="10n" x="68.58" y="29.972" smashed="yes" rot="MR90">
+<attribute name="NAME" x="67.818" y="32.131" size="1.778" layer="26" font="vector" rot="MR90"/>
+</element>
+<element name="C21" library="SparkFun" package="0603" value=".1u" x="52.578" y="37.084" smashed="yes" rot="R180">
+<attribute name="NAME" x="51.562" y="43.053" size="1.778" layer="25" font="vector" rot="R270"/>
+</element>
+<element name="U1" library="Cool_Electricity" package="SSOP28L_CIRRUS" value="CS5467" x="37.28" y="30.742" smashed="yes" rot="R270">
+<attribute name="NAME" x="29.818" y="31.202" size="1.778" layer="21" rot="R270"/>
+</element>
+<element name="C24" library="SparkFun" package="0603" value=".1u" x="40.386" y="37.084" smashed="yes">
+<attribute name="NAME" x="38.735" y="37.846" size="1.778" layer="25" font="vector"/>
+</element>
+<element name="C28" library="SparkFun" package="0603" value=".1u" x="45.72" y="37.084" smashed="yes">
+<attribute name="NAME" x="44.323" y="37.846" size="1.778" layer="25" font="vector"/>
+</element>
+<element name="C29" library="SparkFun" package="0603" value=".1u" x="34.036" y="37.338" smashed="yes">
+<attribute name="NAME" x="31.877" y="37.846" size="1.778" layer="25" font="vector"/>
+</element>
+<element name="U4" library="SparkFun" package="TQFP32-08" value="ATMEGA168" x="14.018" y="22.05" smashed="yes">
+<attribute name="NAME" x="7.033" y="25.86" size="1.778" layer="25"/>
+</element>
+<element name="Q1" library="SparkFun" package="HC49UP" value="4.096MHz" x="3.302" y="20.574" smashed="yes" rot="R90">
+<attribute name="NAME" x="1.778" y="11.049" size="1.778" layer="25" ratio="10" rot="R90"/>
+</element>
+<element name="C31" library="SparkFun" package="0603" value="22p" x="6.35" y="28.194" smashed="yes">
+<attribute name="NAME" x="0.381" y="28.956" size="1.778" layer="25" font="vector"/>
+</element>
+<element name="C32" library="SparkFun" package="0603" value="22p" x="6.096" y="12.954" smashed="yes">
+<attribute name="NAME" x="7.747" y="12.446" size="1.778" layer="25" font="vector"/>
+</element>
+<element name="C33" library="SparkFun" package="0603" value=".1u" x="7.62" y="23.368" smashed="yes" rot="R270">
+<attribute name="NAME" x="7.112" y="21.717" size="1.778" layer="25" font="vector" rot="R270"/>
+</element>
+<element name="C34" library="SparkFun" package="0603" value=".1u" x="20.574" y="19.304" smashed="yes" rot="R90">
+<attribute name="NAME" x="23.622" y="18.415" size="1.778" layer="25" font="vector" rot="R90"/>
+</element>
+<element name="TP1" library="WSNlib" package="TESTPOINT" value="TESTPOINTSMALLEST" x="47.202" y="24.104" smashed="yes"/>
+<element name="TP2" library="WSNlib" package="TESTPOINT" value="TESTPOINTSMALLEST" x="49.456" y="12.627" smashed="yes"/>
+<element name="TP3" library="WSNlib" package="TESTPOINT" value="TESTPOINTSMALLEST" x="41.47" y="12.039" smashed="yes"/>
+<element name="TP4" library="WSNlib" package="TESTPOINT" value="TESTPOINTSMALLEST" x="43.303" y="26.835" smashed="yes"/>
+<element name="TP5" library="WSNlib" package="TESTPOINT" value="TESTPOINTSMALLEST" x="33.348" y="12.42" smashed="yes"/>
+<element name="TP6" library="WSNlib" package="TESTPOINT" value="TESTPOINTSMALLEST" x="35.554" y="23.931" smashed="yes"/>
+<element name="TP7" library="WSNlib" package="TESTPOINT" value="TESTPOINTSMALLEST" x="25.473" y="12.341" smashed="yes"/>
+<element name="TP8" library="WSNlib" package="TESTPOINT" value="TESTPOINTSMALLEST" x="31.727" y="26.789" smashed="yes"/>
+<element name="TP18" library="WSNlib" package="TESTPOINT" value="TESTPOINTSMALLEST" x="75.638" y="47.77" smashed="yes"/>
+<element name="TP19" library="WSNlib" package="TESTPOINT" value="TESTPOINTSMALLEST" x="20.358" y="21.704" smashed="yes"/>
+<element name="TP20" library="WSNlib" package="TESTPOINT" value="TESTPOINTSMALLEST" x="20.452" y="23.386" smashed="yes"/>
+<element name="U6" library="SparkFun" package="XBEE-1" value="XBEE-1B1" x="6.604" y="42.291" smashed="yes" rot="R270"/>
+<element name="R43" library="SparkFun" package="0603" value="4.7k" x="22.606" y="50.038" smashed="yes" rot="MR90">
+<attribute name="NAME" x="21.336" y="43.561" size="1.778" layer="26" font="vector" rot="MR90"/>
+</element>
+<element name="R44" library="SparkFun" package="0603" value="10k" x="25.4" y="50.8" smashed="yes" rot="MR0">
+<attribute name="NAME" x="28.575" y="48.26" size="1.778" layer="26" font="vector" rot="MR0"/>
+</element>
+<element name="C37" library="SparkFun" package="0603" value="10u" x="56.642" y="52.07" smashed="yes" rot="R90">
+<attribute name="NAME" x="56.388" y="45.847" size="1.778" layer="25" font="vector" rot="R90"/>
+</element>
+<element name="C38" library="SparkFun" package="0603" value="10u" x="30.988" y="46.482" smashed="yes" rot="MR90">
+<attribute name="NAME" x="32.258" y="44.323" size="1.778" layer="26" font="vector" rot="MR90"/>
+</element>
+<element name="C40" library="SparkFun" package="0603" value=".1u" x="29.21" y="52.324" smashed="yes" rot="MR90">
+<attribute name="NAME" x="30.48" y="49.657" size="1.778" layer="26" font="vector" rot="MR90"/>
+</element>
+<element name="JP1" library="custom" package="1X06" value="" x="51.562" y="52.324" smashed="yes" rot="R180">
+<attribute name="VALUE" x="52.832" y="55.499" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="C41" library="SparkFun" package="0603" value=".1u" x="38.862" y="48.768" smashed="yes" rot="R90">
+<attribute name="NAME" x="38.1" y="46.355" size="1.778" layer="25" font="vector" rot="R90"/>
+</element>
+<element name="R46" library="SparkFun" package="0603" value="10k" x="42.672" y="48.006" smashed="yes">
+<attribute name="NAME" x="41.275" y="48.768" size="1.778" layer="25" font="vector"/>
+</element>
+<element name="TP21" library="WSNlib" package="TESTPOINT-100MIL" value="TESTPOINT100MIL" x="77.47" y="50.038" smashed="yes"/>
+<element name="TP24" library="WSNlib" package="TESTPOINT-100MIL" value="TESTPOINT100MIL" x="77.47" y="53.086" smashed="yes"/>
+<element name="JP2" library="SparkFun" package="2X3-NS" value="AVR_SPI_PRG_6NS" x="5.08" y="6.096" smashed="yes" rot="R90">
+<attribute name="NAME" x="2.413" y="2.54" size="1.778" layer="25" ratio="10" rot="R90"/>
+</element>
+<element name="R47" library="SparkFun" package="0603" value="4.7k" x="18.542" y="50.292" smashed="yes" rot="MR90">
+<attribute name="NAME" x="18.034" y="43.561" size="1.778" layer="26" font="vector" rot="MR90"/>
+</element>
+<element name="R48" library="SparkFun" package="0603" value="10k" x="15.748" y="50.8" smashed="yes" rot="MR180">
+<attribute name="NAME" x="14.224" y="44.831" size="1.778" layer="26" font="vector" rot="MR90"/>
+</element>
+<element name="U5" library="Cool_Electricity" package="RAC01_02-SC" value="RAC01_02-SC" x="68.03" y="26.12" smashed="yes" rot="R90">
+<attribute name="NAME" x="79.526" y="47.14" size="1.778" layer="25" rot="R180"/>
+</element>
+<element name="C35" library="rcl_new" package="PANASONIC_G" value="1000u" x="63.47" y="49.275" smashed="yes">
+<attribute name="NAME" x="70.387" y="50.252" size="1.778" layer="25" rot="R90"/>
+</element>
+<element name="U7" library="Cool_Electricity" package="TSOT23-5_LINEAR" value="" x="27.686" y="46.228" smashed="yes" rot="MR0">
+<attribute name="NAME" x="25.94" y="46.958" size="1.778" layer="26" rot="MR270"/>
+</element>
+<element name="LINE" library="Cool_Electricity" package="14GAUGE_HOLE" value="1P_HOLE" x="77.47" y="5.08" smashed="yes">
+<attribute name="NAME" x="77.978" y="2.286" size="1.778" layer="25" rot="R180"/>
+</element>
+<element name="NEUTRAL" library="Cool_Electricity" package="14GAUGE_HOLE" value="1P_HOLE" x="62" y="4" smashed="yes">
+<attribute name="NAME" x="66.612" y="1.802" size="1.778" layer="25" rot="R180"/>
+</element>
+<element name="N1" library="Cool_Electricity" package="14GAUGE_HOLE" value="1P_HOLE" x="53" y="4" smashed="yes">
+<attribute name="NAME" x="50.46" y="1.46" size="1.778" layer="25" rot="R90"/>
+</element>
+<element name="N2" library="Cool_Electricity" package="14GAUGE_HOLE" value="1P_HOLE" x="45" y="4" smashed="yes">
+<attribute name="NAME" x="42.46" y="1.46" size="1.778" layer="25" rot="R90"/>
+</element>
+<element name="N3" library="Cool_Electricity" package="14GAUGE_HOLE" value="1P_HOLE" x="37" y="4" smashed="yes">
+<attribute name="NAME" x="34.46" y="1.46" size="1.778" layer="25" rot="R90"/>
+</element>
+<element name="N4" library="Cool_Electricity" package="14GAUGE_HOLE" value="1P_HOLE" x="29" y="4" smashed="yes">
+<attribute name="NAME" x="26.46" y="1.46" size="1.778" layer="25" rot="R90"/>
+</element>
+<element name="LED1" library="led" package="CHIPLED_0805" value="" x="17.78" y="5.588" smashed="yes" rot="R180">
+<attribute name="NAME" x="17.018" y="14.478" size="1.778" layer="25" rot="R270"/>
+<attribute name="VALUE" x="15.24" y="6.858" size="1.27" layer="27" rot="R270"/>
+</element>
+<element name="LED2" library="led" package="CHIPLED_0805" value="" x="15.24" y="5.588" smashed="yes" rot="R180">
+<attribute name="NAME" x="14.478" y="14.478" size="1.778" layer="25" rot="R270"/>
+<attribute name="VALUE" x="12.7" y="6.858" size="1.27" layer="27" rot="R270"/>
+</element>
+<element name="LINE1" library="Cool_Electricity" package="14GAUGE_HOLE" value="1P_HOLE" x="72.39" y="5.08" smashed="yes"/>
 </elements>
 <signals>
 <signal name="NRET1">
@@ -3274,6 +3408,7 @@ design rules under a new name.</description>
 <via x="3.81" y="50.8" extent="1-16" drill="3.2"/>
 <via x="3.81" y="38.1" extent="1-16" drill="3.2"/>
 <via x="49.53" y="45.72" extent="1-16" drill="3.2"/>
+<via x="22.86" y="5.08" extent="1-16" drill="3.2"/>
 </signal>
 <signal name="NRET2">
 <contactref element="R4" pad="2"/>
