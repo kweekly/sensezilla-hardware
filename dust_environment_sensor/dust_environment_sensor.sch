@@ -211,6 +211,25 @@
 <wire x1="-1.3" y1="-1" x2="-1.3" y2="1.1" width="0.127" layer="21"/>
 <circle x="-0.6" y="-0.7" radius="0.316225" width="0.127" layer="21"/>
 </package>
+<package name="BX0036">
+<hole x="15.9" y="0" drill="3.8"/>
+<hole x="-15.9" y="0" drill="3.8"/>
+<pad name="NEG" x="27.8" y="0" drill="1.6" diameter="2.54"/>
+<pad name="POS" x="-27.8" y="0" drill="1.6" diameter="2.54" shape="square"/>
+<wire x1="-29.55" y1="17" x2="-23.45" y2="17" width="0.127" layer="21"/>
+<wire x1="-23.45" y1="17" x2="-23.45" y2="15.1" width="0.127" layer="21"/>
+<wire x1="-23.45" y1="15.1" x2="29.55" y2="15.1" width="0.127" layer="21"/>
+<wire x1="29.55" y1="15.1" x2="29.55" y2="-17" width="0.127" layer="21"/>
+<wire x1="29.55" y1="-17" x2="24" y2="-17" width="0.127" layer="21"/>
+<wire x1="24" y1="-17" x2="24" y2="-15.1" width="0.127" layer="21"/>
+<wire x1="24" y1="-15.1" x2="-24.55" y2="-15.1" width="0.127" layer="21"/>
+<wire x1="-24.55" y1="-15.1" x2="-29.55" y2="-15.1" width="0.127" layer="21"/>
+<wire x1="-29.55" y1="-15.1" x2="-29.55" y2="17" width="0.127" layer="21"/>
+<wire x1="-22" y1="11" x2="-22" y2="5" width="0.6096" layer="21"/>
+<wire x1="-25" y1="8" x2="-19" y2="8" width="0.6096" layer="21"/>
+<text x="-29.21" y="17.78" size="1.27" layer="25">&gt;NAME</text>
+<text x="-29.21" y="-17.78" size="1.27" layer="27">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="LTP5901">
@@ -358,6 +377,15 @@
 <wire x1="-10.16" y1="-5.08" x2="-10.16" y2="5.08" width="0.254" layer="94"/>
 <text x="-10.16" y="7.62" size="1.27" layer="95">&gt;NAME</text>
 <text x="-10.16" y="-7.62" size="1.27" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="BX0036">
+<wire x1="-5.08" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="2.54" y2="0" width="0.254" layer="94"/>
+<text x="5.588" y="3.302" size="2.54" layer="94">+</text>
+<pin name="NEG" x="0" y="-2.54" visible="off" length="short" rot="R90"/>
+<pin name="POS" x="0" y="5.08" visible="off" length="short" rot="R270"/>
+<text x="7.62" y="7.62" size="2.54" layer="95">&gt;NAME</text>
+<text x="7.62" y="-2.54" size="2.54" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -534,6 +562,23 @@
 </device>
 </devices>
 </deviceset>
+<deviceset name="BX0036" prefix="J" uservalue="yes">
+<description>BX0036 C-cell battery holder</description>
+<gates>
+<gate name="G$1" symbol="BX0036" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="BX0036">
+<connects>
+<connect gate="G$1" pin="NEG" pad="NEG"/>
+<connect gate="G$1" pin="POS" pad="POS"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 <library name="supply1">
@@ -589,6 +634,8 @@
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
+<part name="J1" library="Cool_Electricity" deviceset="BX0036" device=""/>
+<part name="GND7" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -605,6 +652,8 @@
 <instance part="GND4" gate="1" x="101.6" y="2.54"/>
 <instance part="GND5" gate="1" x="33.02" y="5.08"/>
 <instance part="GND6" gate="1" x="160.02" y="106.68"/>
+<instance part="J1" gate="G$1" x="259.08" y="38.1"/>
+<instance part="GND7" gate="1" x="256.54" y="27.94"/>
 </instances>
 <busses>
 </busses>
@@ -691,6 +740,12 @@
 <pinref part="GND2" gate="1" pin="GND"/>
 <wire x1="256.54" y1="101.6" x2="261.62" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="261.62" y1="101.6" x2="261.62" y2="96.52" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND7" gate="1" pin="GND"/>
+<pinref part="J1" gate="G$1" pin="NEG"/>
+<wire x1="256.54" y1="30.48" x2="259.08" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="259.08" y1="30.48" x2="259.08" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
