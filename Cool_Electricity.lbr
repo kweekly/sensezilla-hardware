@@ -2140,6 +2140,21 @@ It has reduced top mask to make it harder to put the component on the wrong side
 <wire x1="12.2" y1="-10.25" x2="9.8" y2="-10.25" width="0.127" layer="21"/>
 <wire x1="9.8" y1="-10.25" x2="9.8" y2="10.25" width="0.127" layer="21"/>
 </package>
+<package name="3-213598-2">
+<pad name="2" x="6.35" y="0.8128" drill="2.54"/>
+<pad name="1" x="-6.35" y="0.8128" drill="2.54" shape="square"/>
+<pad name="3" x="0" y="-3.3782" drill="2.54"/>
+<wire x1="-12.0015" y1="12.0015" x2="12.0015" y2="12.0015" width="0.127" layer="21"/>
+<wire x1="12.0015" y1="12.0015" x2="12.0015" y2="-12.0015" width="0.127" layer="21"/>
+<wire x1="12.0015" y1="-12.0015" x2="-12.0015" y2="-12.0015" width="0.127" layer="21"/>
+<wire x1="-12.0015" y1="-12.0015" x2="-12.0015" y2="12.0015" width="0.127" layer="21"/>
+<text x="-12.7" y="12.7" size="1.27" layer="25">&gt;NAME</text>
+<text x="-11.43" y="-13.97" size="1.27" layer="25">&gt;VALUE</text>
+<wire x1="-15.5575" y1="15.5575" x2="15.5575" y2="15.5575" width="0.127" layer="51" style="shortdash"/>
+<wire x1="15.5575" y1="15.5575" x2="15.5575" y2="-15.5575" width="0.127" layer="51" style="shortdash"/>
+<wire x1="15.5575" y1="-15.5575" x2="-15.5575" y2="-15.5575" width="0.127" layer="51" style="shortdash"/>
+<wire x1="-15.5575" y1="-15.5575" x2="-15.5575" y2="15.5575" width="0.127" layer="51" style="shortdash"/>
+</package>
 </packages>
 <symbols>
 <symbol name="78M6618">
@@ -2823,6 +2838,46 @@ It has reduced top mask to make it harder to put the component on the wrong side
 <pin name="AD2/DIO2" x="15.24" y="7.62" length="short" rot="R180"/>
 <pin name="AD1/DIO1" x="15.24" y="10.16" length="short" rot="R180"/>
 <pin name="AD0/DIO0" x="15.24" y="12.7" length="short" rot="R180"/>
+</symbol>
+<symbol name="OUTLET">
+<wire x1="-5.08" y1="7.62" x2="5.08" y2="7.62" width="0.254" layer="94"/>
+<wire x1="5.08" y1="7.62" x2="5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-5.08" x2="0" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="-5.08" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-5.08" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="2.54" x2="-5.08" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-2.794" y1="5.08" x2="-2.794" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-2.794" y1="2.54" x2="-2.794" y2="0" width="0.254" layer="94"/>
+<wire x1="-2.794" y1="0" x2="-1.778" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.778" y1="0" x2="-1.778" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-1.778" y1="5.08" x2="-2.794" y2="5.08" width="0.254" layer="94"/>
+<wire x1="2.032" y1="5.08" x2="2.032" y2="0.762" width="0.254" layer="94"/>
+<wire x1="2.032" y1="0.762" x2="3.048" y2="0.762" width="0.254" layer="94"/>
+<wire x1="3.048" y1="0.762" x2="3.048" y2="2.54" width="0.254" layer="94"/>
+<wire x1="3.048" y1="2.54" x2="3.048" y2="5.08" width="0.254" layer="94"/>
+<wire x1="3.048" y1="5.08" x2="2.032" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-0.508" y1="-2.032" x2="1.524" y2="-2.032" width="0.254" layer="94" curve="-180"/>
+<wire x1="1.524" y1="-2.032" x2="1.524" y2="-2.794" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-2.794" x2="0" y2="-2.794" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.794" x2="-0.508" y2="-2.794" width="0.254" layer="94"/>
+<wire x1="-0.508" y1="-2.794" x2="-0.508" y2="-2.032" width="0.254" layer="94"/>
+<pin name="N" x="-7.62" y="2.54" visible="off" length="short"/>
+<pin name="L" x="7.62" y="2.54" visible="off" length="short" rot="R180"/>
+<pin name="EARTH" x="0" y="-7.62" visible="off" length="short" rot="R90"/>
+<wire x1="-5.08" y1="2.54" x2="-2.794" y2="2.54" width="0.127" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="3.048" y2="2.54" width="0.127" layer="94"/>
+<wire x1="0" y1="-5.08" x2="0" y2="-2.794" width="0.127" layer="94"/>
+<text x="-5.08" y="10.16" size="1.27" layer="95">&gt;NAME</text>
+<text x="-10.16" y="-7.62" size="1.27" layer="95">&gt;VALUE</text>
+<text x="-3.048" y="5.842" size="1.27" layer="94">N</text>
+<text x="2.032" y="5.588" size="1.27" layer="94">L</text>
+<wire x1="2.032" y1="-2.54" x2="3.048" y2="-2.54" width="0.127" layer="94"/>
+<wire x1="3.048" y1="-2.54" x2="4.064" y2="-2.54" width="0.127" layer="94"/>
+<wire x1="2.286" y1="-2.794" x2="3.81" y2="-2.794" width="0.127" layer="94"/>
+<wire x1="2.54" y1="-3.048" x2="3.556" y2="-3.048" width="0.127" layer="94"/>
+<wire x1="3.048" y1="-2.54" x2="3.048" y2="-1.778" width="0.127" layer="94"/>
+<wire x1="2.794" y1="-3.302" x2="3.302" y2="-3.302" width="0.127" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -4401,6 +4456,23 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <connect gate="G$1" pin="ON/!SLEEP" pad="13"/>
 <connect gate="G$1" pin="RF_TX/AD4/DIO4" pad="11"/>
 <connect gate="G$1" pin="VREF" pad="14"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="AC_OUTLET" prefix="AC">
+<gates>
+<gate name="G$1" symbol="OUTLET" x="0" y="-2.54"/>
+</gates>
+<devices>
+<device name="" package="3-213598-2">
+<connects>
+<connect gate="G$1" pin="EARTH" pad="3"/>
+<connect gate="G$1" pin="L" pad="2"/>
+<connect gate="G$1" pin="N" pad="1"/>
 </connects>
 <technologies>
 <technology name=""/>
