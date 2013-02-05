@@ -12274,8 +12274,8 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <part name="JP9" library="SparkFun-Connectors" deviceset="M05X2" device="PTH" value="JTAG"/>
 <part name="GND24" library="SparkFun" deviceset="GND" device=""/>
 <part name="P+3" library="supply1" deviceset="VCC" device=""/>
-<part name="C11" library="rcl" deviceset="C-EU" device="C0603" value="TODO"/>
-<part name="C12" library="rcl" deviceset="C-EU" device="C0603" value="TODO"/>
+<part name="C11" library="rcl" deviceset="C-EU" device="C0603" value="10p"/>
+<part name="C12" library="rcl" deviceset="C-EU" device="C0603" value="10p"/>
 <part name="GND19" library="SparkFun" deviceset="GND" device=""/>
 <part name="X2" library="WSNlib" deviceset="XTAL" device="ABS07" value="32.768KHz"/>
 <part name="J2" library="SparkFun-Connectors" deviceset="AVR_SPI_PRG_6" device="PTH" value="EXP"/>
