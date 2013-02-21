@@ -1,0 +1,10 @@
+Schematic:
+	No SPI Connection to PM Chips!
+	Capacitor too Tall
+	Output Enable on U8 should be tied LOW, not HIGH
+
+Layout:
+	XBee footprint messed up
+
+Enclosure:
+	Bigger holes in corner, bend side tabs in more

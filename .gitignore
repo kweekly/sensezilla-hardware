@@ -13,3 +13,18 @@
 
 *.eps
 *#*
+
+*.bak
+*.ger
+*.GER
+*.gpi
+*.dri
+*.pro
+dust_environment_sensor/dust_environment_sensor.html
+PM_sensor_breakout/Drills_PM_sensor_breakout_v1.TXT
+PM_sensor_breakout/eagle.epf
+PM_sensor_breakout/PM_sensor_breakout_v1.zip
+power_strip_monitor/Drills_power_strip_monitor_V2.TXT
+power_strip_monitor/Drills_power_strip_monitor_V2.zip
+power_strip_monitor/netlist.txt
+power_strip_monitor/power_strip_monitor_V2.html
