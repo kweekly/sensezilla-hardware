@@ -12337,9 +12337,9 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <instance part="GND10" gate="1" x="121.92" y="104.14"/>
 <instance part="C7" gate="G$1" x="149.86" y="22.86"/>
 <instance part="GND11" gate="1" x="149.86" y="15.24"/>
-<instance part="P+6" gate="VCC" x="274.32" y="137.16"/>
-<instance part="R1" gate="G$1" x="274.32" y="129.54" rot="R90"/>
-<instance part="R2" gate="G$1" x="279.4" y="129.54" rot="R90"/>
+<instance part="P+6" gate="VCC" x="266.7" y="139.7"/>
+<instance part="R1" gate="G$1" x="269.24" y="129.54" rot="R90"/>
+<instance part="R2" gate="G$1" x="281.94" y="129.54" rot="R90"/>
 <instance part="P+7" gate="VCC" x="162.56" y="81.28" rot="R90"/>
 <instance part="STANDOFF1" gate="G$1" x="124.46" y="0"/>
 <instance part="STANDOFF2" gate="G$1" x="129.54" y="0"/>
@@ -12718,8 +12718,9 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <pinref part="P+6" gate="VCC" pin="VCC"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="279.4" y1="134.62" x2="274.32" y2="134.62" width="0.1524" layer="91"/>
-<junction x="274.32" y="134.62"/>
+<wire x1="281.94" y1="134.62" x2="269.24" y2="134.62" width="0.1524" layer="91"/>
+<junction x="269.24" y="134.62"/>
+<wire x1="269.24" y1="134.62" x2="266.7" y2="137.16" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="CS/#SPIEN"/>
@@ -12852,7 +12853,7 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <label x="254" y="121.92" size="1.778" layer="95"/>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="274.32" y1="121.92" x2="284.48" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="274.32" y1="124.46" x2="274.32" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="269.24" y1="124.46" x2="274.32" y2="121.92" width="0.1524" layer="91"/>
 <junction x="274.32" y="121.92"/>
 </segment>
 <segment>
@@ -12887,7 +12888,7 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <label x="254" y="119.38" size="1.778" layer="95"/>
 <pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="279.4" y1="119.38" x2="284.48" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="279.4" y1="124.46" x2="279.4" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="281.94" y1="124.46" x2="279.4" y2="119.38" width="0.1524" layer="91"/>
 <junction x="279.4" y="119.38"/>
 </segment>
 <segment>
