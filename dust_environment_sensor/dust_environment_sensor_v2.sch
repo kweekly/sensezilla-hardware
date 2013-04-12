@@ -351,6 +351,23 @@
 <text x="-0.8255" y="1.778" size="0.4064" layer="25">&gt;NAME</text>
 <text x="-1.016" y="-0.1905" size="0.4064" layer="27">&gt;VALUE</text>
 </package>
+<package name="T_TAOS">
+<smd name="2" x="-1.45" y="0" dx="1.3" dy="0.7" layer="1"/>
+<smd name="5" x="1.45" y="0" dx="1.3" dy="0.7" layer="1"/>
+<smd name="1" x="-1.45" y="0.95" dx="1.3" dy="0.7" layer="1"/>
+<smd name="3" x="-1.45" y="-0.95" dx="1.3" dy="0.7" layer="1"/>
+<smd name="6" x="1.45" y="0.95" dx="1.3" dy="0.7" layer="1"/>
+<smd name="4" x="1.45" y="-0.95" dx="1.3" dy="0.7" layer="1"/>
+<wire x1="-1.9" y1="1.3" x2="1.9" y2="1.3" width="0.127" layer="21"/>
+<wire x1="1.9" y1="1.3" x2="1.9" y2="-1.3" width="0.127" layer="21"/>
+<wire x1="1.9" y1="-1.3" x2="-1.9" y2="-1.3" width="0.127" layer="21"/>
+<wire x1="-1.9" y1="-1.3" x2="-1.9" y2="1.3" width="0.127" layer="21"/>
+<text x="-2" y="2" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2" y="-3" size="1.27" layer="27">&gt;VALUE</text>
+<wire x1="-0.2" y1="1.3" x2="-0.2" y2="0.5" width="0.127" layer="27"/>
+<wire x1="-0.2" y1="0.5" x2="-1.95" y2="0.5" width="0.127" layer="27"/>
+<circle x="-2.8" y="1.45" radius="0.206153125" width="0.127" layer="27"/>
+</package>
 </packages>
 <symbols>
 <symbol name="LIS3DH">
@@ -591,13 +608,26 @@
 <gate name="G$1" symbol="TSL2560" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="CL6_TAOS">
+<device name="CL" package="CL6_TAOS">
 <connects>
 <connect gate="G$1" pin="ADDR" pad="3"/>
 <connect gate="G$1" pin="GND" pad="2"/>
 <connect gate="G$1" pin="INT" pad="6"/>
 <connect gate="G$1" pin="SCL" pad="4"/>
 <connect gate="G$1" pin="SDA" pad="5"/>
+<connect gate="G$1" pin="VDD" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="T" package="T_TAOS">
+<connects>
+<connect gate="G$1" pin="ADDR" pad="2"/>
+<connect gate="G$1" pin="GND" pad="3"/>
+<connect gate="G$1" pin="INT" pad="5"/>
+<connect gate="G$1" pin="SCL" pad="4"/>
+<connect gate="G$1" pin="SDA" pad="6"/>
 <connect gate="G$1" pin="VDD" pad="1"/>
 </connects>
 <technologies>
@@ -11949,7 +11979,7 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <parts>
 <part name="U2" library="Cool_Electricity" deviceset="LIS3DH" device=""/>
 <part name="U3" library="Cool_Electricity" deviceset="SI7005" device=""/>
-<part name="U4" library="Cool_Electricity" deviceset="TSL2560" device=""/>
+<part name="U4" library="Cool_Electricity" deviceset="TSL2560" device="CL"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
@@ -11959,7 +11989,6 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <part name="P+2" library="supply1" deviceset="VCC" device=""/>
 <part name="P+5" library="supply1" deviceset="VCC" device=""/>
 <part name="C2" library="rcl" deviceset="C-US" device="C0603" value="10u"/>
-<part name="C3" library="rcl" deviceset="C-US" device="C0603" value="100n"/>
 <part name="C4" library="SparkFun-Capacitors" deviceset="CAP_POL" device="1206-KIT" value="100u"/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
@@ -12028,6 +12057,10 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <part name="C6" library="SparkFun-Capacitors" deviceset="CAP_POL" device="7343" value="680u"/>
 <part name="C18" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
+<part name="U1" library="Cool_Electricity" deviceset="TSL2560" device="T"/>
+<part name="GND5" library="supply1" deviceset="GND" device=""/>
+<part name="P+1" library="supply1" deviceset="VCC" device=""/>
+<part name="C3" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
 </parts>
 <sheets>
 <sheet>
@@ -12051,7 +12084,6 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <instance part="P+2" gate="VCC" x="302.26" y="93.98"/>
 <instance part="P+5" gate="VCC" x="215.9" y="116.84"/>
 <instance part="C2" gate="G$1" x="220.98" y="109.22"/>
-<instance part="C3" gate="G$1" x="307.34" y="88.9"/>
 <instance part="C4" gate="G$1" x="342.9" y="7.62"/>
 <instance part="GND8" gate="1" x="142.24" y="35.56"/>
 <instance part="GND9" gate="1" x="220.98" y="101.6"/>
@@ -12120,6 +12152,10 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <instance part="C6" gate="G$1" x="429.26" y="15.24"/>
 <instance part="C18" gate="G$1" x="45.72" y="210.82" rot="R90"/>
 <instance part="GND4" gate="1" x="40.64" y="210.82" rot="R270"/>
+<instance part="U1" gate="G$1" x="279.4" y="104.14"/>
+<instance part="GND5" gate="1" x="297.18" y="99.06"/>
+<instance part="P+1" gate="VCC" x="297.18" y="111.76"/>
+<instance part="C3" gate="G$1" x="307.34" y="88.9"/>
 </instances>
 <busses>
 </busses>
@@ -12167,7 +12203,6 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <wire x1="289.56" y1="81.28" x2="292.1" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="292.1" y1="81.28" x2="294.64" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="294.64" y1="81.28" x2="294.64" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="C3" gate="G$1" pin="2"/>
 <wire x1="307.34" y1="83.82" x2="307.34" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="307.34" y1="76.2" x2="294.64" y2="76.2" width="0.1524" layer="91"/>
 <junction x="294.64" y="76.2"/>
@@ -12177,6 +12212,7 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <wire x1="292.1" y1="83.82" x2="294.64" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="294.64" y1="83.82" x2="294.64" y2="81.28" width="0.1524" layer="91"/>
 <junction x="294.64" y="81.28"/>
+<pinref part="C3" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="GND7" gate="1" pin="GND"/>
@@ -12368,6 +12404,16 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <pinref part="C18" gate="G$1" pin="1"/>
 <pinref part="GND4" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="GND"/>
+<pinref part="GND5" gate="1" pin="GND"/>
+<wire x1="297.18" y1="101.6" x2="294.64" y2="101.6" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="ADDR"/>
+<wire x1="294.64" y1="101.6" x2="292.1" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="292.1" y1="104.14" x2="294.64" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="294.64" y1="104.14" x2="294.64" y2="101.6" width="0.1524" layer="91"/>
+<junction x="294.64" y="101.6"/>
+</segment>
 </net>
 <net name="VCC" class="0">
 <segment>
@@ -12387,13 +12433,13 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <junction x="210.82" y="109.22"/>
 </segment>
 <segment>
-<pinref part="C3" gate="G$1" pin="1"/>
 <pinref part="P+2" gate="VCC" pin="VCC"/>
 <wire x1="307.34" y1="91.44" x2="302.26" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="U4" gate="G$1" pin="VDD"/>
 <wire x1="302.26" y1="91.44" x2="292.1" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="292.1" y1="91.44" x2="292.1" y2="86.36" width="0.1524" layer="91"/>
 <junction x="302.26" y="91.44"/>
+<pinref part="C3" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="P+6" gate="VCC" pin="VCC"/>
@@ -12509,6 +12555,12 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <wire x1="50.8" y1="210.82" x2="50.8" y2="203.2" width="0.1524" layer="91"/>
 <junction x="50.8" y="203.2"/>
 </segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="VDD"/>
+<pinref part="P+1" gate="VCC" pin="VCC"/>
+<wire x1="292.1" y1="106.68" x2="297.18" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="297.18" y1="106.68" x2="297.18" y2="109.22" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="N$1" class="0">
 <segment>
@@ -12530,8 +12582,13 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 </segment>
 <segment>
 <pinref part="U4" gate="G$1" pin="SCL"/>
-<wire x1="264.16" y1="86.36" x2="236.22" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="264.16" y1="86.36" x2="256.54" y2="86.36" width="0.1524" layer="91"/>
 <label x="236.22" y="86.36" size="1.778" layer="95"/>
+<pinref part="U1" gate="G$1" pin="SCL"/>
+<wire x1="256.54" y1="86.36" x2="236.22" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="264.16" y1="106.68" x2="256.54" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="106.68" x2="256.54" y2="86.36" width="0.1524" layer="91"/>
+<junction x="256.54" y="86.36"/>
 </segment>
 <segment>
 <wire x1="254" y1="121.92" x2="274.32" y2="121.92" width="0.1524" layer="91"/>
@@ -12555,8 +12612,13 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <net name="I2C_SDA" class="0">
 <segment>
 <pinref part="U4" gate="G$1" pin="SDA"/>
-<wire x1="264.16" y1="83.82" x2="236.22" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="264.16" y1="83.82" x2="259.08" y2="83.82" width="0.1524" layer="91"/>
 <label x="236.22" y="83.82" size="1.778" layer="95"/>
+<pinref part="U1" gate="G$1" pin="SDA"/>
+<wire x1="259.08" y1="83.82" x2="236.22" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="264.16" y1="104.14" x2="259.08" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="259.08" y1="104.14" x2="259.08" y2="83.82" width="0.1524" layer="91"/>
+<junction x="259.08" y="83.82"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="SDA/SDI/SDO"/>
@@ -12670,8 +12732,13 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <net name="LIGHT_INT" class="0">
 <segment>
 <pinref part="U4" gate="G$1" pin="INT"/>
-<wire x1="264.16" y1="81.28" x2="236.22" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="264.16" y1="81.28" x2="261.62" y2="81.28" width="0.1524" layer="91"/>
 <label x="236.22" y="81.28" size="1.778" layer="95"/>
+<pinref part="U1" gate="G$1" pin="INT"/>
+<wire x1="261.62" y1="81.28" x2="236.22" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="264.16" y1="101.6" x2="261.62" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="261.62" y1="101.6" x2="261.62" y2="81.28" width="0.1524" layer="91"/>
+<junction x="261.62" y="81.28"/>
 </segment>
 <segment>
 <pinref part="IC2" gate="G$1" pin="(PCINT6/ADC6)PA6"/>
