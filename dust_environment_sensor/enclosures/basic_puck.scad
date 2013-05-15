@@ -8,16 +8,16 @@ board_radius = 35;
 pcb_thick = 1.4;
 lowest_of_board = 37;
 
-case_wall_thick = 3; 
-case_wall_gap = 0.5;
+case_wall_thick = 1.5; 
+case_wall_gap = 1.5;
 
 mhole_block_wall = 4;
 
 key_thickness = 3;
 key_length = 3;
 key_depth = 8;
-key_fitfudge = 0.3;
-key_position = 0;
+key_fitfudge = 0.6;
+key_positions = [0,160,200];
 
 /*translate([-dust_origin_x(), -dust_origin_y(), -dust_origin_z()]) {
  dust_environment_sensor(); 
@@ -32,9 +32,11 @@ module case() {
         difference() {
             cylinder(r=(case_wall_thick + case_wall_gap + fitfudge + board_radius),h = -case_floor + case_wall_thick); 
             translate([0,0,case_wall_thick]) cylinder(r=(board_radius + case_wall_gap + fitfudge),h=100);
-            translate([0,0,-case_floor+case_wall_thick])
-                rotate([0,0,key_position]) 
-                    translate([50,0,50-key_depth-key_fitfudge]) cube([100,key_thickness+key_fitfudge,100],center=true);
+            for (key_position=key_positions) {
+                translate([0,0,-case_floor+case_wall_thick])
+                    rotate([0,0,key_position]) 
+                        translate([50,0,50-key_depth-key_fitfudge]) cube([100,key_thickness+key_fitfudge*2,100],center=true);
+            }
         }
         
         intersection() {
@@ -64,7 +66,7 @@ module case() {
 }
 
 lid_wall_thick = 2;
-lid_case_fitfudge = 0.2;
+lid_case_fitfudge = 0.9;
 lid_case_overlap = 8;
 lid_extra_height = 10;
 
@@ -73,15 +75,17 @@ module lid() {
         union() {
             difference() {
                 translate([0,0,-lid_case_overlap])
-                    cylinder(r=(case_wall_thick + case_wall_gap + fitfudge + board_radius + 2*lid_case_fitfudge + lid_wall_thick),
+                    cylinder(r=(case_wall_thick + case_wall_gap + fitfudge + board_radius + lid_case_fitfudge + lid_wall_thick),
                              h=(lid_case_overlap+lid_wall_thick + lid_extra_height + fitfudge));
                 translate([0,0,-100]) 
-                    cylinder(r=(case_wall_thick + case_wall_gap + fitfudge + board_radius + 2*lid_case_fitfudge),h=100 + fitfudge + lid_extra_height);
+                    cylinder(r=(case_wall_thick + case_wall_gap + fitfudge + board_radius + lid_case_fitfudge),h=100 + fitfudge + lid_extra_height);
             }
             
             translate([-dust_origin_x(), -dust_origin_y(), -dust_origin_z()-fitfudge])
                light_viewing_window(height=lid_extra_height+lid_wall_thick-fitfudge,extraradius=lid_wall_thick+fitfudge);
                
+            for (key_position=key_positions) {
+            rotate([0,0,key_position])
             translate([case_wall_thick+case_wall_gap+fitfudge+board_radius + 2*lid_case_fitfudge-key_length,-key_thickness/2,-key_depth]) {
                 /*translate([key_length+lid_wall_thick/2,0,0])
                 rotate([0,0,180])
@@ -91,7 +95,8 @@ module lid() {
                 cube([key_length+lid_wall_thick/2,
                       key_thickness,
                        lid_case_overlap+lid_wall_thick+lid_extra_height+fitfudge-(lid_case_overlap-key_depth)]);
-             }
+            }
+            }
                 
         }
             
@@ -103,5 +108,5 @@ module lid() {
 }
 
 
-case();
-//lid();
+//case();
+lid();
