@@ -50,3 +50,19 @@ module make_slot(length=20, axis=[0,0,1]) {
    }
     
 }
+
+xycorner_array = [[-1,-1],[1,-1],[-1,1],[1,1]];
+
+module rounded_box(dim,rad) {
+    w = dim[0];
+    h = dim[1];
+    t = dim[2];
+    union(){
+        cube([w, h-rad*2,t],center=true);
+        cube([w-rad*2, h,t],center=true);        
+        for (corn=xycorner_array)
+            translate([(w/2-rad)*corn[0],(h/2-rad)*corn[1],-t/2])
+            cylinder(r=rad,h=t);
+    }
+
+}
