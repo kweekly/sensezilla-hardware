@@ -42,14 +42,19 @@ function battery_hole_locations() = [[35-15.9,36],[35+15.9,36]];
 module light_viewing_window(vertangle=20,extraradius=0,version=1,height=100) {
     if ( version == 1 ) {
         translate([58.72,22.43,3])
-        cylinder(r1=4.5 + extraradius,r2=4.5+height*tan(vertangle)+extraradius,h=height);
+        cylinder(r1=4.5 + extraradius,r2=4.5+(height-3)*tan(vertangle)+extraradius,h=height-3);
     } else if ( version == 2 ) {
         translate([53.6,22.5,3]) 
         difference() {
-            cylinder(r1=4.5 + extraradius,r2=4.5+height*tan(vertangle)+extraradius,h=height);    
+            cylinder(r1=4.5 + extraradius,r2=4.5+(height-3)*tan(vertangle)+extraradius,h=height-3);    
             translate([-100-3-extraradius,-50,-250]) cube([100,100,500]);
         }
     }
+}
+// preferred verticle angle = 56
+module pir_viewing_window(vertangle=56,extraradius=0,height=100,coneunder=0) {
+    translate([22,61,10-coneunder]) 
+    cylinder(r1=9.72 + extraradius - coneunder*tan(vertangle),r2=9.72+(height-10-coneunder)*tan(vertangle)+extraradius,h=height-10);    
 }
 
 function mounting_hole_locations() = [[14,58],[57,58],[57,13],[14,13]];

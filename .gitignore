@@ -29,3 +29,8 @@ power_strip_monitor/Drills_power_strip_monitor_V2.zip
 power_strip_monitor/netlist.txt
 power_strip_monitor/power_strip_monitor_V2.html
 dust_environment_sensor/enclosures/enclosures.zip
+
+*.stl
+*.rsdoc
+*.x3g
+*.raw

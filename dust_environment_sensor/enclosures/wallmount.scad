@@ -3,7 +3,6 @@ use <kevinlib.scad>
 
 $fn = 128;
 
-fitfudge = 0;
 
 board_radius = 35;
 pcb_thick = 1.76;
@@ -26,21 +25,21 @@ lowest_of_holder = 3.5;
 highest_of_holder = 32;
 
 // intermediates
-cblock_w = (board_radius+case_wall_gap+fitfudge+case_wall_thick)*2;
-cblock_h = board_radius+battery_holder_ypos+battery_holder_w/2 + 2*(case_wall_gap+fitfudge+case_wall_thick);
+cblock_w = (board_radius+case_wall_gap)*2;
+cblock_h = board_radius+battery_holder_ypos+battery_holder_w/2 + 2*(case_wall_gap);
 cblock_z = -lowest_of_holder-battery_holder_zpos-case_wall_gap;
 mblock_h = lowest_of_holder+case_wall_gap+case_wall_thick;
 
 
 *translate([-dust_origin_x(), -dust_origin_y(), -dust_origin_z()]) {
- dust_environment_sensor(version=2, battery=false, fitfudge=fitfudge); 
+ dust_environment_sensor(version=2, battery=false); 
 
 } 
 
 *translate([0,-battery_holder_ypos,-battery_holder_zpos])
         rotate([180,0,0])
         translate([-dust_origin_x(), -dust_origin_y(), -dust_origin_z()])
-            %battery_holder(fitfudge = fitfudge);
+            %battery_holder();
         
 
 lid_wall_thick=1.5;
@@ -49,6 +48,22 @@ lblock_p = lid_wall_thick + lid_fit_gap;
 lblock_w = cblock_w + 2*(lblock_p);
 lblock_th = -cblock_z + 12.5 + lblock_p;
 lblock_h = cblock_h + 2*(lblock_p);
+
+module battery_hole(extraradius=0) {
+    *translate([0,-battery_holder_ypos-1,-battery_holder_zpos+31.7/2+1.28/2+3]) cube([59.1 + 1,30.27+1,31.7-1.28],center=true);
+    
+    up_pos = -battery_holder_ypos-1+(30.27+2)/2;
+    side_pos = lblock_w/2-lblock_p + extraradius;
+    side_pos2 = (59.1 + 1)/2 + extraradius;
+    translate([0,up_pos+extraradius,0])
+    rotate([90,0,0])
+    linear_extrude(height=lblock_h-lblock_w/2+up_pos - lid_wall_thick - lblock_p + .6 + 2.7*extraradius,center=false)
+        polygon(points=[[-side_pos, lblock_th+cblock_z-case_wall_thick/2-lblock_p],
+                        [-side_pos2, -battery_holder_zpos+31.7+3+extraradius],
+                        [side_pos2, -battery_holder_zpos+31.7+3+extraradius],
+                        [side_pos, lblock_th+cblock_z-case_wall_thick/2-lblock_p]]);
+}
+
 module lid() {
     difference() {
         union(){
@@ -58,9 +73,10 @@ module lid() {
                 translate([-lblock_w/2,-lblock_h+lblock_w/2,cblock_z-case_wall_thick/2]) cube([lblock_w,lblock_h-lblock_w/2,lblock_th]);
                 
                 /*translate([-dust_origin_x(), -dust_origin_y(), -dust_origin_z()])
-                    translate([35,20,7+fitfudge/2]) cube([25+2*fitfudge+lblock_p*2,32+2*fitfudge+lblock_p*2,14+fitfudge+lblock_p*2],center=true);
+                    translate([35,20,7]) cube([25+lblock_p*2,32+lblock_p*2,14+lblock_p*2],center=true);
                   */  
-                *translate([0,-battery_holder_ypos-1,-battery_holder_zpos+31.7/2+fitfudge+1.28/2+3]) cube([59.1+fitfudge*2+2*lblock_p,30.27+2*fitfudge+2*lblock_p,31.7+fitfudge-1.28+2*lblock_p],center=true);    
+                //translate([0,-battery_holder_ypos-1,-battery_holder_zpos+31.7/2+1.28/2+3]) cube([59.1+2*lblock_p,30.27+2*lblock_p,31.7-1.28+2*lblock_p],center=true);
+                *translate([0,0,lblock_p]) battery_hole(extraradius=lid_wall_thick );
                 
             }
             union() {
@@ -73,34 +89,48 @@ module lid() {
                 translate([0,0,cblock_z-case_wall_thick/2-5]) cylinder(r=lblock_w/2-lid_wall_thick,h=5+case_wall_thick);
                 translate([-lblock_w/2+lid_wall_thick,-lblock_h+lblock_w/2+lid_wall_thick,cblock_z-case_wall_thick/2-5]) cube([lblock_w-2*lid_wall_thick,lblock_h-lblock_w/2-2*lid_wall_thick,5+case_wall_thick]);
                 
-                translate([-dust_origin_x(), -dust_origin_y(), -dust_origin_z()-.5]) light_viewing_window(version=2);
+                translate([-dust_origin_x(), -dust_origin_y(), -dust_origin_z()-.02]) {
+                    light_viewing_window(version=2);
+                    pir_viewing_window(coneunder=5);
+                }
                 
                 translate([-dust_origin_x(), -dust_origin_y(), -dust_origin_z()]) {
-                    translate([35,20,7+fitfudge/2]) cube([25+2*fitfudge,32+2*fitfudge,13.1+fitfudge],center=true);
-                    translate([22,61,0]) cylinder(r=10.8/2+fitfudge, h=16+fitfudge);
+                    translate([35,20,7]) cube([25,32,13.1],center=true);
+                    translate([22,61,0]) cylinder(r=10.8/2, h=16);
                 }
                     
-               translate([0,-battery_holder_ypos-1,-battery_holder_zpos+31.7/2+fitfudge+1.28/2+3]) cube([59.1+fitfudge*2 + 1,30.27+2*fitfudge+1,31.7+fitfudge-1.28],center=true);
-              
+                translate([-20,-100,-10]) cube([20,200,5],center=true);
+                translate([20,-100,-10]) cube([20,200,5],center=true);
+               //translate([0,-batte0ry_holder_ypos-1,-battery_holder_zpos+31.7/2+1.28/2+3]) cube([59.1 + 1,30.27+1,31.7-1.28],center=true);
+                battery_hole();
             }
         }
      
         translate([-dust_origin_x(), -dust_origin_y(), -dust_origin_z()])
         difference() {
-            light_viewing_window(version=2,height=lblock_th/2-.1,extraradius=lid_wall_thick/2);
-            translate([0,0,-.5]) light_viewing_window(version=2);
+            union() {
+                light_viewing_window(version=2,height=lblock_th/2-.1+3,extraradius=1);
+                intersection() {
+                    pir_viewing_window(height=lblock_th/2-.1+3,extraradius=1);
+                    translate([dust_origin_x(), dust_origin_y(), dust_origin_z()]) cylinder(r=lblock_w/2,h=100);
+                }
+            }
+            translate([0,0,-.02]) {
+                light_viewing_window(version=2);
+                pir_viewing_window();
+            }
         }
         }
     
         // use for trimming batter holder part
-       * translate([0,0,-250+cblock_z-case_wall_thick/2+lblock_th+.1]) cube([500,500,500],center=true);
+        *translate([0,0,-250+cblock_z-case_wall_thick/2+lblock_th+.1]) cube([500,500,500],center=true);
     }
 }
 
 module chamfer_profile() {
     polygon( points=[[0,highest_of_holder-cblock_z],[case_extra_top,highest_of_holder-cblock_z],[case_extra_top+case_chamfer,0],[0,0]] );
 }
-module lrchamfer(h=cblock_h-board_radius-(case_wall_gap+case_wall_thick+fitfudge)+case_extra_top) {
+module lrchamfer(h=cblock_h-board_radius-(case_wall_gap+case_wall_thick)+case_extra_top) {
         translate([cblock_w/2,0,cblock_z-case_wall_thick/2]) rotate([90,0,0]) 
             linear_extrude(height=h )
             chamfer_profile();
@@ -112,8 +142,8 @@ module lrchamfer(h=cblock_h-board_radius-(case_wall_gap+case_wall_thick+fitfudge
             
 
 }
-module bchamfer(h=cblock_w-(case_wall_gap+case_wall_thick+fitfudge)+case_extra_top) {
-       translate([0,-cblock_h+board_radius+(case_wall_gap+case_wall_thick+fitfudge),cblock_z-case_wall_thick/2]) 
+module bchamfer(h=cblock_w-(case_wall_gap+case_wall_thick)+case_extra_top) {
+       translate([0,-cblock_h+board_radius+(case_wall_gap+case_wall_thick),cblock_z-case_wall_thick/2]) 
        rotate([0,0,-90]) rotate([90,0,0]) 
         linear_extrude(height=h,center=true )
         chamfer_profile();
@@ -145,7 +175,7 @@ module plate() {
 
             intersection() {
             translate([0,0,cblock_z-case_wall_thick/2]) 
-            rotate_extrude($fn=250) translate([board_radius+case_wall_gap+case_wall_thick+fitfudge,0,0]) chamfer_profile();
+            rotate_extrude($fn=250) translate([board_radius+case_wall_gap+case_wall_thick,0,0]) chamfer_profile();
             translate([-250,0,-250]) cube([500,500,500]);
             }
             */
@@ -198,10 +228,19 @@ module plate() {
                 m3_bolt(tap=true,height=13);
             }
         }
+        
+        translate([0,-(cblock_h-cblock_w/2)/2+4,-20]) {
+            translate([cblock_w/2-6,0,0]) m3_bolt(tap=true,height=30);
+            translate([-(cblock_w/2-6),0,0]) m3_bolt(tap=true,height=30);
+        }
      }
 }
 
 
-//plate();
+//translate([0,0,40]) 
+plate();
+
+/*
 rotate([0,180,0])
 lid();
+*/
