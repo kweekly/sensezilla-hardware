@@ -2214,6 +2214,22 @@ It has reduced top mask to make it harder to put the component on the wrong side
 <text x="-2" y="-3" size="1.27" layer="27">&gt;VALUE</text>
 <circle x="-1" y="1" radius="0.5" width="0.127" layer="21"/>
 </package>
+<package name="BX0036_NOHOLES">
+<pad name="NEG" x="27.8" y="0" drill="1.1" diameter="2.54"/>
+<pad name="POS" x="-27.8" y="0" drill="1.1" diameter="2.54" shape="square"/>
+<wire x1="-29.55" y1="15.095" x2="24.81" y2="15.095" width="0.127" layer="21"/>
+<wire x1="24.81" y1="15.095" x2="24.81" y2="17.005" width="0.127" layer="21"/>
+<wire x1="24.81" y1="17.005" x2="29.55" y2="17.005" width="0.127" layer="21"/>
+<wire x1="29.55" y1="17.005" x2="29.55" y2="-15.095" width="0.127" layer="21"/>
+<wire x1="29.55" y1="-15.095" x2="-24.26" y2="-15.095" width="0.127" layer="21"/>
+<wire x1="-24.26" y1="-15.095" x2="-24.26" y2="-17.005" width="0.127" layer="21"/>
+<wire x1="-24.26" y1="-17.005" x2="-29.55" y2="-17.005" width="0.127" layer="21"/>
+<wire x1="-29.55" y1="-17.005" x2="-29.55" y2="15.095" width="0.127" layer="21"/>
+<wire x1="-22" y1="11" x2="-22" y2="5" width="0.6096" layer="21"/>
+<wire x1="-25" y1="8" x2="-19" y2="8" width="0.6096" layer="21"/>
+<text x="-29.21" y="17.78" size="1.27" layer="25">&gt;NAME</text>
+<text x="-29.21" y="-17.78" size="1.27" layer="27">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="78M6618">
@@ -3759,6 +3775,15 @@ It has reduced top mask to make it harder to put the component on the wrong side
 </gates>
 <devices>
 <device name="" package="BX0036">
+<connects>
+<connect gate="G$1" pin="NEG" pad="NEG"/>
+<connect gate="G$1" pin="POS" pad="POS"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="NH" package="BX0036_NOHOLES">
 <connects>
 <connect gate="G$1" pin="NEG" pad="NEG"/>
 <connect gate="G$1" pin="POS" pad="POS"/>
