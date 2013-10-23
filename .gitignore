@@ -17,6 +17,9 @@
 *.bak
 *.ger
 *.GER
+*.TXT
+*.html
+*.G*
 *.gpi
 *.dri
 *.pro

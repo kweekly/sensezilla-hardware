@@ -12003,8 +12003,8 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <part name="GND18" library="SparkFun" deviceset="GND" device=""/>
 <part name="C10" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
 <part name="IC2" library="atmel" deviceset="ATMEGA644" device="A"/>
-<part name="LED2" library="led" deviceset="LED" device="CHIPLED_0805"/>
-<part name="LED3" library="led" deviceset="LED" device="CHIPLED_0805"/>
+<part name="LED2" library="led" deviceset="LED" device="CHIPLED_0805" value="BLUE"/>
+<part name="LED3" library="led" deviceset="LED" device="CHIPLED_0805" value="AMBER"/>
 <part name="GND20" library="SparkFun" deviceset="GND" device=""/>
 <part name="JP8" library="custom" deviceset="FTDI_CABLE" device="SIP"/>
 <part name="GND21" library="SparkFun" deviceset="GND" device=""/>
