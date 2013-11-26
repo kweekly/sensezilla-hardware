@@ -34,6 +34,5 @@ power_strip_monitor/power_strip_monitor_V2.html
 dust_environment_sensor/enclosures/enclosures.zip
 
 *.stl
-*.rsdoc
 *.x3g
 *.raw
